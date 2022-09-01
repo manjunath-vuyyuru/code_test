@@ -38,7 +38,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: | 
-          steps:
             - name: Microsoft Teams Notification
               uses: DCAW-Automation/notify-microsoft-teams@master
               if: always()
@@ -53,7 +52,6 @@ jobs:
               if_failure:
                 name: Only if failure
                 runs-on: self-hosted
-          steps:
             - name: Microsoft Teams Notification
               uses: DCAW-Automation/notify-microsoft-teams@master
               if: failure()
